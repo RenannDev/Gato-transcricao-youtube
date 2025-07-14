@@ -581,7 +581,7 @@ body {
 }
 
 .testim .arrow:hover {
-    color: #ea830e;
+    color: var(--destaque-color);
 }
     
 
@@ -623,8 +623,8 @@ body {
 
 .testim .dots .dot.active,
 .testim .dots .dot:hover {
-    background: #ea830e;
-    border-color: #ea830e;
+    background: var(--destaque-color);
+    border-color: var(--primaria-color);
 }
 
 .testim .dots .dot.active {
@@ -669,7 +669,7 @@ body {
 }
 
 .testim .cont div h2 {
-    color: #ea830e;
+    color: var(--destaque-color);
     font-size: 1em;
     margin: 15px 0;
 }
@@ -689,7 +689,7 @@ body {
     animation: testim-show .5s ease-in-out forwards;            
 }
 
-.testim .cont div.active .img img{
+
 
 
 .testim .cont div.active h2 {
@@ -698,6 +698,7 @@ body {
     -ms-animation: testim-content-in .4s ease-in-out forwards;    
     -o-animation: testim-content-in .4s ease-in-out forwards;    
     animation: testim-content-in .4s ease-in-out forwards;    
+    color: var(--destaque-color);
 }
 
 .testim .cont div.active p {
@@ -705,7 +706,8 @@ body {
     -moz-animation: testim-content-in .5s ease-in-out forwards;    
     -ms-animation: testim-content-in .5s ease-in-out forwards;    
     -o-animation: testim-content-in .5s ease-in-out forwards;    
-    animation: testim-content-in .5s ease-in-out forwards;    
+    animation: testim-content-in .5s ease-in-out forwards;   
+    color: var(--segundaria-color); 
 }
 
 .testim .cont div.inactive .img img {
@@ -713,7 +715,8 @@ body {
     -moz-animation: testim-hide .5s ease-in-out forwards;            
     -ms-animation: testim-hide .5s ease-in-out forwards;            
     -o-animation: testim-hide .5s ease-in-out forwards;            
-    animation: testim-hide .5s ease-in-out forwards;            
+    animation: testim-hide .5s ease-in-out forwards; 
+    
 }
 
 .testim .cont div.inactive h2 {
@@ -721,7 +724,8 @@ body {
     -moz-animation: testim-content-out .4s ease-in-out forwards;        
     -ms-animation: testim-content-out .4s ease-in-out forwards;        
     -o-animation: testim-content-out .4s ease-in-out forwards;        
-    animation: testim-content-out .4s ease-in-out forwards;        
+    animation: testim-content-out .4s ease-in-out forwards;     
+    color: var(--destaque-color);   
 }
 
 .testim .cont div.inactive p {
@@ -744,13 +748,13 @@ body {
     }
 
     70% {
-        -webkit-box-shadow: 0px 0px 10px 5px #ea830e;        
-        box-shadow: 0px 0px 10px 5px #ea830e;        
+        -webkit-box-shadow: 0px 0px 10px 5px var(--destaque-color);        
+        box-shadow: 0px 0px 10px 5px var(--destaque-color);;        
     }
 
     100% {
-        -webkit-box-shadow: 0px 0px 0px 0px #ea830e;        
-        box-shadow: 0px 0px 0px 0px #ea830e;        
+        -webkit-box-shadow: 0px 0px 0px 0px var(--destaque-color);        
+        box-shadow: 0px 0px 0px 0px var(--destaque-color);        
     }
 }
 
@@ -766,13 +770,13 @@ body {
     }
 
     70% {
-        -moz-box-shadow: 0px 0px 10px 5px #ea830e;        
-        box-shadow: 0px 0px 10px 5px #ea830e;        
+        -moz-box-shadow: 0px 0px 10px 5px var(--destaque-color);        
+        box-shadow: 0px 0px 10px 5px var(--destaque-color);        
     }
 
     100% {
-        -moz-box-shadow: 0px 0px 0px 0px #ea830e;        
-        box-shadow: 0px 0px 0px 0px #ea830e;        
+        -moz-box-shadow: 0px 0px 0px 0px var(--destaque-color);        
+        box-shadow: 0px 0px 0px 0px var(--destaque-color);        
     }
 }
 
@@ -788,13 +792,13 @@ body {
     }
 
     70% {
-        -ms-box-shadow: 0px 0px 10px 5px #ea830e;        
-        box-shadow: 0px 0px 10px 5px #ea830e;        
+        -ms-box-shadow: 0px 0px 10px 5px var(--destaque-color);        
+        box-shadow: 0px 0px 10px 5px var(--destaque-color);        
     }
 
     100% {
-        -ms-box-shadow: 0px 0px 0px 0px #ea830e;        
-        box-shadow: 0px 0px 0px 0px #ea830e;        
+        -ms-box-shadow: 0px 0px 0px 0px var(--destaque-color);        
+        box-shadow: 0px 0px 0px 0px var(--destaque-color);        
     }
 }
 
@@ -810,13 +814,13 @@ body {
     }
 
     70% {
-        -o-box-shadow: 0px 0px 10px 5px #ea830e;        
-        box-shadow: 0px 0px 10px 5px #ea830e;        
+        -o-box-shadow: 0px 0px 10px 5px var(--destaque-color);        
+        box-shadow: 0px 0px 10px 5px var(--destaque-color);        
     }
 
     100% {
-        -o-box-shadow: 0px 0px 0px 0px #ea830e;        
-        box-shadow: 0px 0px 0px 0px #ea830e;        
+        -o-box-shadow: 0px 0px 0px 0px var;        
+        box-shadow: 0px 0px 0px 0px var(--destaque-color);        
     }
 }
 
