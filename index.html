@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Transcript Gerador | Extrair & Baixar Vídeo Transcripts</title>
+    <meta name="description" content="Gere transcrições do YouTube instantaneamente com nossa ferramenta gratuita. Extraia e baixe transcrições de vídeos sem esforço. Perfeito para acessibilidade, SEO e criação de conteúdo. Além disso, disfrute da nossa ferramente de resumo de AI para transformar transcrições longas em resumos concisos. Comece agora Gratuitamente!">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="img/logo-gato-transcricao.png" alt="Logo" class="logo-icon">
+               
+                <img src="https://ext.same-assets.com/854737373/586944123.svg" alt="YouTube Transcrição" class="logo-text"> 
+               
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#api">API</a></li>
+                <li><a href="#bulk">Bulk</a></li>
+                <li><a href="https://discord.gg/zv8VhxrGSD" class="discord-link">
+                    <img src="https://ext.same-assets.com/854737373/4126274787.svg" alt="Discord">
+                    Join us on Discord
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="hero-section">
+                <div class="hero-left">
+                    <!-- Star Rating -->
+                    <div class="rating-section">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="rating-text">
+                            <strong>Avaliado com 4.6 de 5</strong>
+                            <span class="rating-subtext">(Com base em 3.955 avaliações
+)</span>
+                        </div>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h1 class="hero-title">
+                        Transforme vídeos do YouTube<br>
+                        em transcrições<br>
+                        <span class="highlight">Imediatamente!
+</span>
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="hero-description">
+                        Converta facilmente um vídeo do YouTube em transcrição, copie e<br>
+                        baixe a transcrição gerada com um clique.<br>
+                        100% Gratuito.
+                    </p>
+
+                    <!-- Input Section -->
+                    <div class="input-section">
+                        <div class="input-group">
+                            <input
+                                type="text"
+                                placeholder="Cole o link do seu vídeo do Youtube aqui"
+                                class="url-input"
+                                id="youtubeUrl"
+                            >
+                            <button class="extract-btn" id="extractBtn">
+                                Extrair transcrição
+                            </button>
+                        </div>
+                        
+                        <!--- TALVEZ NO FUTURO.....
+                        <div class="additional-options">
+                            <button class="option-btn">Extract in Bulk</button>
+                            <button class="option-btn new-feature">
+                                Extract Channel ID
+                                <span class="new-badge">New</span>
+                            </button>
+                        </div>
+                        -->
+
+
+                    </div>
+                   
+
+                    <!-- Trust Indicators -->
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <span class="trust-icon">
+                                <img class="verificado-icon"  src="icons/verificado.png" alt="Verificado"> 
+                            Scamadviser verificado </span>
+                        </div>
+
+                        <div class="trust-item">
+                            <span class="trust-icon">
+                                <img class="comunidade-icon"  src="icons/comunidade.png" alt="comunidade">
+                            Confiado por<strong> 932Mil+ </strong> usuários em todo o mundo</span>
+                        </div>
+
+                        <div class="trust-item">
+                            <span class="trust-icon">
+                                <img class="cadeado-icon"  src="icons/cadeado.png" alt="comunidade"> 
+                            SSL criptografado</span>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <img src="https://ext.same-assets.com/854737373/4080774872.jpeg" alt="Woman with headphones recording" class="hero-image">
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <section class="about-section">
+                <div class="about-content">
+                    <h2><span class="about-simplificando">Simplificando</span> transcrições para criadores, profissionais e estudantes</h2>
+                    <p>Acreditamos que todo conteúdo deve ser fácil de acessar, reutilizar e compartilhar. Por isso, criamos uma ferramenta simples e confiável para converter vídeos do YouTube em transcrições — gratuita e sem complicações.</p>
+
+                    <div class="powered-by">
+                        <span>Distribuído por</span>
+                        <div class="powered-logos">
+                            <img src="https://ext.same-assets.com/854737373/3443589483.svg" alt="Partner 1">
+                            <img src="https://ext.same-assets.com/854737373/306916959.svg" alt="Partner 2">
+                            <img src="https://ext.same-assets.com/854737373/1203759397.svg" alt="Partner 3">
+                            <img src="icons/vercel.svg" alt="Partner 4" width="100">
+                            <img src="icons/deepseek-text.svg" alt="Partner 5" >
+                            <img src="icons/nextjs-2.svg" alt="Partner 6" >
+
+                            <!-- Cópias dos mesmos logos para loop infinito -->
+                            <img src="https://ext.same-assets.com/854737373/3443589483.svg " alt="Partner 1">
+                            <img src="https://ext.same-assets.com/854737373/306916959.svg " alt="Partner 2">
+                            <img src="https://ext.same-assets.com/854737373/1203759397.svg " alt="Partner 3">
+                            <img src="icons/vercel.svg" alt="Partner 4" width="100">
+                            <img src="icons/deepseek-text.svg" alt="Partner 5">
+                            <img src="icons/nextjs-2.svg" alt="Partner 6">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Testemunhos-->
+
+                <div class="testimonials-header">
+                    <div class="content-testimonials">
+                <span class="highlight2">Características</span>
+                <h2 class="title-testumnhos">Não acredite apenas na nossa palavra, aqui está o que nossos usuários dizem</h2>
+                </div>
+                <div class="testimonials-avalation">
+                    <ul class="stars">
+                        <li><img src="icons/estrela.png" alt="" class="list-estrelas"></li>
+                        <li><img src="icons/estrela.png" alt="" class="list-estrelas"></li>
+                        <li><img src="icons/estrela.png" alt="" class="list-estrelas"></li>
+                        <li><img src="icons/estrela.png" alt="" class="list-estrelas"></li>
+                        <li><img src="icons/estrela.png" alt="" class="list-estrelas"></li>
+                    </ul>
+                    <h3 class="title-para-stars">Avaliado com 4,9 de 5 estrelas</h3>
+                    <p class="sub-title-para-stars">(Com base em 9.096 avaliações)</p>
+                </div>
+            </div>
+            <!-- Testimonials Section -->
+             <!-- 
+
+
+<!---- 
+	use as setas esquerda e direita do seu teclado ou simplesmente deslize para a esquerda e direita no seu smartphone para interagir com o controle deslizante
+-->
+
+<section id="testim" class="testim">
+<!--         <div class="testim-cover"> -->
+            <div class="wrap">
+
+                <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+                <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+                <ul id="testim-dots" class="dots">
+                    <li class="dot active"></li><!--
+                    --><li class="dot"></li><!--
+                    --><li class="dot"></li><!--
+                    --><li class="dot"></li><!--
+                    --><li class="dot"></li>
+                </ul>
+                <div id="testim-content" class="cont">
+                    
+                    <div class="active">
+                        <div class="img"><img src="https://images.pexels.com/photos/2383750/pexels-photo-2383750.jpeg" alt=""></div>
+                        <h2>Lorem P. Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                    </div>
+
+                    <div>
+                        <div class="img"><img src="https://images.pexels.com/photos/5234256/pexels-photo-5234256.jpeg" alt=""></div>
+                        <h2>Mr. Lorem Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                    </div>
+
+                    <div>
+                        <div class="img"><img src="https://images.pexels.com/photos/4584259/pexels-photo-4584259.jpeg" alt=""></div>
+                        <h2>Lorem Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                    </div>
+
+                    <div>
+                        <div class="img"><img src="https://images.pexels.com/photos/6626056/pexels-photo-6626056.jpeg" alt=""></div>
+                        <h2>Lorem De Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                    </div>
+
+                    <div>
+                        <div class="img"><img src="https://images.pexels.com/photos/5990142/pexels-photo-5990142.jpeg" alt=""></div>
+                        <h2>Ms. Lorem R. Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                    </div>
+
+                </div>
+
+            </div>
+<!--         </div> -->
+    </section>
+
+<script src="https://use.fontawesome.com/1744f3f671.js"></script>
+
+    
+    <!-- END OF TESTIMONIALS -->
+
+            <!-- Features Section -->
+            <section class="features-section" >
+                <span class="highlight2">Características</span>
+                <h2>Tudo o que você precisa para transformar vídeos do YouTube em conteúdo prático</h2>
+
+
+                <!--         --------Itens grid-----  --->
+                
+            </section>
+        </div>
+    </main>
+    <section class="features-grid-wrapper"></section>
+        <div class="animated-lines">
+            <div class="features-grid">
+                <div class="card">
+                    <div class="content">
+                        <div class="feature-icon">
+                            <img src="icons/extracao.png" alt="Free Extraction" />
+                        </div>
+                        <div>
+                            <h3>Extração Gratuita</h3>
+                            <p>Extraia facilmente até 25 transcrições do YouTube sem custos, sem inscrições, apenas acesso rápido e simples ao seu conteúdo de vídeo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="content">
+                        <div class="feature-icon">
+                            <img src="icons/raio.png" alt="Fast and Reliable" />
+                        </div>
+                        <div>
+                            <h3>Rápido & Confiável</h3>
+                            <p>Obtenha transcrições precisas em segundos. Nossa ferramenta oferece resultados rápidos e confiáveis para que você possa passar do vídeo para o texto sem complicações.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="content">
+                        <div class="feature-icon">
+                            <img src="icons/generative.png" alt="AI Summarize" />
+                        </div>
+                        <div>
+                            <h3>Resumir Com IA</h3>
+                            <p>Transforme transcrições longas em resumos claros e concisos instantaneamente com IA, perfeito para criar notas rápidas, blogs ou postagens sociais.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="content">
+                        <div class="feature-icon">
+                            <img src="icons/play-button.png" alt="Any Video" />
+                        </div>
+                        <div>
+                            <h3>Funciona Em Qualquer Vídeo Público</h3>
+                            <p>Extraia facilmente transcrições de qualquer vídeo do YouTube disponível publicamente, não importa o canal ou tópico.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="content">
+                        <div class="feature-icon">
+                            <img src="icons/save.png" alt="Copy Download" />
+                        </div>
+                        <div>
+                            <h3>Cópia e Download Fáceis</h3>
+                            <p>Copie ou baixe rapidamente sua transcrição com um clique, facilitando salvar, compartilhar ou reutilizar seu conteúdo a qualquer momento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="content">
+                        <div class="feature-icon">
+                            <img src="icons/to-do-list.png" alt="Clean Output" />
+                        </div>
+                        <div>
+                            <h3>Produção Enxuta e Organizada</h3>
+                            <p>Obtenha transcrições bem formatadas que sejam fáceis de ler, editar ou reutilizar em outro conteúdo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="faq-title">
+        <p class="highlight2">Perguntas Frequentes</p>
+        <h2 class="faq-title-h2" >Perguntas gerais que nossos usuários fazem</h2>
+    
+        </div>
+    <div class="wrapper">
+
+  <div class="container-faq">
+    <div class="question">
+      Posso gerar transcrições de vídeo Youtube?
+    </div>
+    <div class="answercont">
+      <div class="answer">
+        O YouTube Transcript permite que você extraia facilmente transcrições de qualquer vídeo do YouTube, mas não criamos transcrições a partir de áudio. Você pode copiar ou baixar a transcrição em vários formatos.<br>
+
+<a href="#">...........</a>
+      </div>
+    </div>
+  </div>
+  
+    <div class="container-faq">
+    <div class="question">
+      O que é Youtube Transcript?
+    </div>
+    <div class="answercont">
+      <div class="answer">
+        O YouTube Transcript é uma ferramenta que permite copiar e baixar facilmente a legenda ou transcrição completa de qualquer vídeo público do YouTube. É rápido, confiável e oferece suporte a vários idiomas.<br>
+
+<a href="#">...........</a>
+      </div>
+    </div>
+  </div>
+  
+      <div class="container-faq">
+    <div class="question">
+      Posso gerar um resumo de uma transcrição de vídeo do Youtube?
+    </div>
+    <div class="answercont">
+      <div class="answer">
+        Sim. Nosso Extrator de Transcrições do YouTube agora permite que você gere um resumo com base na transcrição, usando IA.<br>
+
+<a href="#">...........</a>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="container-faq">
+    <div class="question">
+      Como usar o Youtube Tracrição?
+    </div>
+    <div class="answercont">
+      <div class="answer">
+        Para usar o Extrator de Transcrições do YouTube, basta colar a URL do vídeo do YouTube no campo de entrada e clicar no botão "Obter Transcrição". A ferramenta gerará a transcrição, que você poderá copiar ou baixar em vários formatos, como .txt, .srt, .vtt ou .csv.<br><a href="#">...........</a>
+   
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-faq">
+    <div class="question">
+      O Youtube Transcrição é gratuito?
+    </div>
+    <div class="answercont">
+      <div class="answer">
+        Sim, nosso Extrator de Transcrições do YouTube é gratuito para uso por um número limitado de vídeos por mês. Você pode extrair transcrições de qualquer vídeo do YouTube sem nenhum custo.<br>
+
+<a href="#">...........</a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+    </section>
+    <!-- FIM DO FAQ -->
+
+
+    <!-- Footer -->
+    <div class="footer-banner">
+    <div class="banner-content">
+      <h2>Comece a Converter Vídeos Para Transcrições Sem <span class="destaque-banner-highlight">Esforço!</span></h2>
+      <p>Obtenha suas transcrições do YouTube em apenas alguns cliques—rápido,
+         fácil e totalmente sem complicações.</p>
+      
+    </div>
+
+    <div class="input-section">
+                        <div class="input-group">
+                            <input
+                                type="text"
+                                placeholder="Cole o link do seu vídeo do Youtube aqui"
+                                class="url-input"
+                                id="youtubeUrl"
+                            >
+                            <button class="extract-btn" id="extractBtn">
+                                Extrair transcrição
+                            </button>
+                        </div>
+                        
+  </div>
+    </div>
+
+
+    <footer class="site-footer">
+  <!-- 1. Banner superior -->
+
+  <!-- 2. Conteúdo principal do footer -->
+  <div class="footer-main">
+    <div class="footer-column footer-contact">
+      <img src="img/logo-gato-transcricao.png" alt="Logo" class="footer-logo">
+        <p class="footer-description">
+            Gato Transcrições Youtube é uma ferramenta gratuita que permite extrair e baixar transcrições de vídeos do YouTube de forma rápida e fácil. Ideal para criadores de conteúdo, estudantes e profissionais que desejam acessar o conteúdo dos vídeos sem precisar assisti-los. </p>
+            
+    </div>
+
+    <div class="footer-links">
+      <h4>Meio para contato</h4>
+      <ul>
+        <li><a href="#">meucontato@gmail.com</a></li>
+      </ul>
+<div class="footer-links" >
+
+      <h4>Informações da empresa</h4>
+      <ul>
+        <li><a href="#">transcrições youtube lta</a></li>
+      </ul>
+</div>
+
+      <div class="footer-links">
+        <h4>Social</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Home</a></li>
+        </ul>
+      </div>
+    </div>
+
+      <div class="legal">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Termos de serviços</a></li>
+          <li><a href="#">Privacidade e politica</a></li>
+          <li><a href="#">Cookie policilica</a></li>
+          <li><a href="#"><img src="https://ext.same-assets.com/854737373/586944123.svg" alt="transcrição" class="footer-logo-2"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Copyright -->
+  <div class="footer-bottom">
+    <p>© 2025 Gato Transcrições Youtube. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+    <script src="script.js"></script>  
+</body>
+</html>
