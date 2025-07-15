@@ -598,3 +598,37 @@ document.addEventListener('scroll', function() {
 
     // Ao carregar a página, dispara um scroll falso para ativar animação se já estiver em view
     window.dispatchEvent(new Event('scroll'));
+
+
+    // botao de voltar ao topo
+    document.addEventListener('DOMContentLoaded', function() {
+            const backToTopBtn = document.querySelector('.back-to-top');
+            
+            // Mostrar/ocultar o botão conforme a rolagem
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 500) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
+            });
+            
+            // Rolagem suave ao clicar
+            backToTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Adicionar efeito de clique
+            backToTopBtn.addEventListener('mousedown', function() {
+                this.style.transform = 'scale(0.95)';
+            });
+            
+            backToTopBtn.addEventListener('mouseup', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
