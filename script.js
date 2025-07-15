@@ -11,14 +11,14 @@ function extractVideoId(url) {
     return (match && match[7].length === 11) ? match[7] : null;
 }
 
+
+
+// important 
+
 // Simulate transcript generation
 function generateMockTranscript(videoId) {
     const mockTranscripts = [
-        "Welcome to this amazing video! Today we're going to explore the fascinating world of technology and innovation. Throughout this presentation, we'll dive deep into various concepts that will help you understand the current landscape of digital transformation.",
-        "In this tutorial, we'll walk through step-by-step instructions on how to optimize your workflow. First, let's start with the basics and gradually move towards more advanced techniques that professionals use in their daily work.",
-        "Thank you for joining us today. This educational content covers important topics that are relevant to modern learning. We'll explore different perspectives and provide practical examples that you can apply in real-world scenarios.",
-        "Hello everyone! In today's session, we're focusing on practical applications and real-world examples. This comprehensive guide will help you understand complex concepts through simple explanations and hands-on demonstrations.",
-        "Welcome to our in-depth analysis of current trends and future predictions. We'll examine various case studies and provide insights that will help you make informed decisions in your professional journey."
+        ""
     ];
 
     return mockTranscripts[Math.floor(Math.random() * mockTranscripts.length)];
@@ -109,20 +109,20 @@ function showTranscriptModal(transcript, videoTitle = 'YouTube Video') {
         <div class="modal-backdrop">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3>Transcript Generated Successfully</h3>
+                    <h3>Transcrição Gerada Com Sucesso</h3>
                     <button class="modal-close">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="transcript-info">
                         <h4>${videoTitle}</h4>
-                        <p>Transcript extracted and ready to use</p>
+                        <p>Transcrição extraída e pronta para uso</p>
                     </div>
                     <div class="transcript-content">
                         <textarea readonly>${transcript}</textarea>
                     </div>
                     <div class="modal-actions">
-                        <button class="copy-btn" id="copyTranscript">Copy Transcript</button>
-                        <button class="download-btn" id="downloadTranscript">Download as TXT</button>
+                        <button class="copy-btn" id="copyTranscript">Copiar transcrição</button>
+                        <button class="download-btn" id="downloadTranscript">Baixar em TXT</button>
                     </div>
                 </div>
             </div>
@@ -245,7 +245,7 @@ function showTranscriptModal(transcript, videoTitle = 'YouTube Video') {
         }
 
         .copy-btn {
-            background: linear-gradient(135deg, #b5559e 0%, #d946ef 100%);
+            background: linear-gradient(135deg, red 0%, var(--destaque-color) 100%);
             color: white;
         }
 
@@ -262,8 +262,8 @@ function showTranscriptModal(transcript, videoTitle = 'YouTube Video') {
 
         .download-btn:hover {
             background: #f9fafb;
-            border-color: #b5559e;
-            color: #b5559e;
+            border-color: #ff0000ff;
+            color: #cd3b3bff;
         }
 
         @keyframes fadeIn {
@@ -299,9 +299,9 @@ function showTranscriptModal(transcript, videoTitle = 'YouTube Video') {
     modal.querySelector('#copyTranscript').addEventListener('click', async () => {
         const success = await copyToClipboard(transcript);
         if (success) {
-            showNotification('Transcript copied to clipboard!');
+            showNotification('Transcrição copiada para a área de transferência!');
         } else {
-            showNotification('Failed to copy transcript', 'error');
+            showNotification('Falha ao copiar a transcrição', 'error');
         }
     });
 
@@ -316,7 +316,7 @@ function showTranscriptModal(transcript, videoTitle = 'YouTube Video') {
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
-        showNotification('Transcript downloaded successfully!');
+        showNotification('Transcrição baixada com sucesso!');
     });
 
     // Close modal with Escape key
@@ -339,13 +339,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const url = urlInput.value.trim();
 
         if (!url) {
-            showNotification('Please enter a YouTube URL', 'error');
+            showNotification('Por favor, insira uma URL do YouTube', 'error');
             urlInput.focus();
             return;
         }
 
         if (!isValidYouTubeUrl(url)) {
-            showNotification('Please enter a valid YouTube URL', 'error');
+            showNotification('Por favor, insira um URL válido do YouTube', 'error');
             urlInput.focus();
             return;
         }
@@ -364,16 +364,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const videoTitle = `YouTube Video ${videoId}`;
 
             // Show success
-            showNotification('Transcript extracted successfully!');
+            showNotification('Transcrição extraída com sucesso!');
             showTranscriptModal(transcript, videoTitle);
 
         } catch (error) {
-            showNotification('Failed to extract transcript. Please try again.', 'error');
+            showNotification('Falha ao extrair a transcrição. Por favor, tente novamente..', 'error');
         } finally {
             // Reset button state
             extractBtn.disabled = false;
             extractBtn.classList.remove('loading');
-            extractBtn.textContent = 'Extract transcript';
+            extractBtn.textContent = 'Extrarir Transcrição';
         }
     });
 
@@ -399,9 +399,9 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.addEventListener('click', function() {
             const text = this.textContent.trim();
             if (text.includes('Bulk')) {
-                showNotification('Bulk extraction feature coming soon!', 'info');
+                showNotification('Recursos de extração em lote chegarão em breve!', 'info');
             } else if (text.includes('Channel ID')) {
-                showNotification('Channel ID extraction feature coming soon!', 'info');
+                showNotification('Recursos de extração de ID do canal chegarão em breve!', 'info');
             }
         });
     });
@@ -422,7 +422,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add some demo data on page load
     setTimeout(() => {
-        showNotification('Welcome! Try pasting a YouTube URL to extract its transcript.', 'info');
+        showNotification('Bem-vindo! Tente colar um URL do YouTube para extrair sua transcrição.', 'info');
     }, 1000);
 });
 
@@ -577,3 +577,24 @@ window.onload = function() {
 			
 		})
 }
+
+// Animação de entrada para a seção "Sobre"
+// Adiciona a classe 'visible' quando o elemento entra na viewport
+
+document.addEventListener('scroll', function() {
+      const images = document.querySelector('.about-images');
+      const triggerBottom = window.innerHeight * 0.9;
+
+      // Função que adiciona a classe 'visible' se o topo do elemento estiver acima do trigger
+      function reveal(el) {
+        const top = el.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          el.classList.add('visible');
+        }
+      }
+
+      reveal(images);
+    });
+
+    // Ao carregar a página, dispara um scroll falso para ativar animação se já estiver em view
+    window.dispatchEvent(new Event('scroll'));

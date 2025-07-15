@@ -87,13 +87,13 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: #374151;
+    color: var(--background-color);
     font-weight: 500;
     transition: color 0.2s;
 }
 
 .nav-menu a:hover {
-    color: #b5559e;
+    color: rgb(197, 39, 39);
 }
 
 .discord-link {
@@ -429,67 +429,7 @@ body {
     }
 }
 
-/* Features Section */
-.features-section {
-    margin-bottom: 120px;
-    width: 1200px;
-    margin: 0 auto;
-}
-/*---------------------------------------------------*/
-/* 1. Animação de entrada: fade-in + slide-up */
-@keyframes fadeSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-/* 2. Animação de gradiente no texto */
-@keyframes gradientShift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.highlight2 {
-  opacity: 0;                      
-  animation: 
-    fadeSlideIn 0.8s ease-out 0.2s forwards,   
-    gradientShift 4s ease infinite;           
-
-  /* Gradiente no texto */
-  background: linear-gradient(
-    90deg,
-    red,
-    var(--destaque-color),
-    var(--primaria-color)
-  );
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  
-  /* Outras propriedades originais */
-  display: block;
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-
-
-.features-section h2 {
-    font-size: 48px;
-    font-weight: 700;
-    color: var(--primaria-color);
-    text-align: center;
-    max-width: 800px;
-    text-align: start;
-    line-height: 1.2;
-    margin-bottom: 60px;
-}
 
 /* TESTEMUNHOS*/
 .testimonials-header{
@@ -508,7 +448,7 @@ body {
     
     text-align: start;
     
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 
@@ -537,7 +477,7 @@ body {
 /* cards de testemunhos */
 .testim {
 		width: 100%;
-		margin: 10rem 0;
+		margin: 13rem 0 0 0;
 		
 		-webkit-transform: translatey(-50%);
 		-moz-transform: translatey(-50%);
@@ -1130,7 +1070,152 @@ body {
 	}
 
 }
-/* TESTEMUNHOS*/
+
+
+/*  sobre */
+.about-section-2 {
+      display: flex;
+      flex-wrap: wrap;       /* para responsividade */
+      align-items: center;   /* centraliza verticalmente */
+      justify-content: center;
+      max-width: 1200px;
+      margin-bottom: 10rem;
+      padding-top: 4rem;
+      margin-top: -8rem;
+    }
+
+    /* Coluna de imagens */
+    .about-images {
+      display: grid;
+      grid-template-columns: 300px 240px;
+      gap: 20px;       
+      flex: 1;            
+      min-width: 280px;       
+      opacity: 0;            
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    /* Imagem individual */
+    .about-images img {
+      
+      height: 400px;
+      width: 100%;
+      border-radius: 16px;   /* cantos arredondados */
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    /* Coluna de texto */
+    .about-content-2 {
+      flex: 1;
+      min-width: 280px;
+      padding-left: 20px;            /* inicialmente invisível */
+      transform: translateY(20px);
+      transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
+      text-align: start;
+    }
+
+    .about-content-2 .about-title {
+      color: var(--destaque-color);        /* cor do “About” */
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .about-content-2 .about-subtitle {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      color: var(--primaria-color);
+      
+    }
+
+    .about-content-2 .about-description {
+      font-size: 1rem;
+      max-width: 500px;
+      color: var(--segundaria-color);
+    }
+
+    /* Classe que será adicionada via JS para animar entrada */
+    .visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    /* Responsividade para telas pequenas */
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+      }
+      .about-images {
+        justify-content: center;
+      }
+      .about-content h1 {
+        font-size: 2rem;
+      }
+    }
+
+/* Features Section */
+.features-section {
+    margin-bottom: 120px;
+    width: 1200px;
+    margin: 0 auto;
+}
+/*---------------------------------------------------*/
+/* 1. Animação de entrada: fade-in + slide-up */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2. Animação de gradiente no texto */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.highlight2 {
+  opacity: 0;                      
+  animation: 
+    fadeSlideIn 0.8s ease-out 0.2s forwards,   
+    gradientShift 4s ease infinite;           
+
+  /* Gradiente no texto */
+  background: linear-gradient(
+    90deg,
+    red,
+    var(--destaque-color),
+    var(--primaria-color)
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Outras propriedades originais */
+  display: block;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
+
+.features-section h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--primaria-color);
+    text-align: center;
+    max-width: 800px;
+    text-align: start;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
 
 /*Itens grid-----------------------------------*/
 
@@ -1142,7 +1227,7 @@ padding: 0;
 .features-grid {
  padding-inline-start: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
   width: 100%;
   max-width: 1600px; /* opcional para limitar em monitores ultralargos */
@@ -1150,6 +1235,7 @@ padding: 0;
   position: relative;
   z-index: 1;
   
+  padding-inline: 30px;
 }
 
 /*       animações  de fundo          */
@@ -1617,11 +1703,15 @@ a { text-decoration: none; color: inherit; }
         gap: 48px;
         text-align: center;
     }
+    .stars{
+        display: flex;
+        justify-content: center;
+    }
 
     .hero-title {
         font-size: 40px;
     }
-
+    
     .input-group {
         flex-direction: column;
     }
@@ -1641,6 +1731,139 @@ a { text-decoration: none; color: inherit; }
 
     .trust-indicators {
         justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .trust-icon > strong{
+        font-size: 16px;
+    }
+    
+    .hero-right{
+        width: 90vw;
+        height: auto;
+        margin: 0 auto;
+        padding-inline: 0;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-header{
+     display: flex;
+     flex-direction: column;
+
+    }
+    .content-testimonials .highlight2{
+        text-align: center;
+    }
+    .title-testumnhos{
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+    }
+    .testimonials-avalation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 4rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .about-images{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        
+    }
+    .about-content-2 {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+
+}
+
+@media screen and (max-width: 768px) {
+    .features-section {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .feature-card {
+        padding: 16px;
+    }
+
+    .feature-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .feature-icon img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .faq-section {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+.highlight2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .faq-title .faq-title-h2{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .wrapper {
+        width: 90vw;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-banner {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .site-footer {
+        padding: 0;
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+    .footer-main{
+        padding: 5rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footer-column, .footer-contact, .footer-links, .legal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-links h4, .legal h4{
+        font-size: 1.5rem;
+    }
+    .footer-links ul li, .legal ul li{
+        font-size: 1rem;
     }
 }
 
@@ -1670,6 +1893,8 @@ a { text-decoration: none; color: inherit; }
         padding: 24px;
     }
 }
+
+
 
 /* Loading states and animations */
 .extract-btn:disabled {
@@ -1706,4 +1931,5 @@ a { text-decoration: none; color: inherit; }
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+}
 }
